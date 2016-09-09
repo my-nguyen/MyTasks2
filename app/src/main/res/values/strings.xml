@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MyTasks</string>
+    <string name="task_label">Task</string>
+    <string name="due_label">Due</string>
+    <string name="priority_label">Priority</string>
+    <string name="note_label">Note</string>
+    <string name="date_picker_title">Due Date:</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="share_action">Share</string>
+    <string name="sort_label">Sort by: </string>
+    <string name="facebook_app_id">532575913608612</string>
+    <string-array name="priority_array">
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+    </string-array>
+    <string-array name="sort_order_array">
+        <item>Date</item>
+        <item>Name</item>
+        <item>Priority</item>
+    </string-array>
+</resources>
