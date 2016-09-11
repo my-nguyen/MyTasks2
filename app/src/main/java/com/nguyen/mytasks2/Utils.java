@@ -8,7 +8,7 @@ import java.util.Date;
  */
 public class Utils {
    public static String getShortDateFromDate(Date date) {
-      SimpleDateFormat dateFormat = new SimpleDateFormat("MM/d/yy");
+      SimpleDateFormat dateFormat = new SimpleDateFormat("M/dd/yy");
       return dateFormat.format(date);
    }
 
