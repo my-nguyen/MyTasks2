@@ -16,31 +16,33 @@
             android:id="@+id/sort_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#B3FFCC"
+            android:background="#ff1a8c"
             android:orientation="horizontal">
             <TextView
                 android:id="@+id/sort_label"
                 android:text="@string/sort_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/item_horizontal_margin"
                 android:textAppearance="?android:textAppearanceMedium"/>
             <Spinner
                 android:id="@+id/sort_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginLeft="@dimen/item_horizontal_margin"/>
         </LinearLayout>
         <View
             android:id="@+id/sort_separator"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="4dp"
             android:layout_below="@id/sort_layout"
-            android:layout_marginTop="@dimen/text_bottom_margin"
-            android:background="#CCCCB3"/>
+            android:background="#CCCCCC"/>
         <ListView
             android:id="@+id/tasks"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:divider="#CCCCCC"
+            android:dividerHeight="4dp"
             android:layout_below="@+id/sort_separator"/>
     </RelativeLayout>
     <android.support.design.widget.FloatingActionButton

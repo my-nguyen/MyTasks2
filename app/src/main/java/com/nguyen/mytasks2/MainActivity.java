@@ -143,6 +143,8 @@ public class MainActivity extends AppCompatActivity implements TaskDeleteDialog.
       for (String string : strings) {
          names.add(string);
       }
+      String string = "ut aliquid scire se gaudeant quod quidem iam fit etiam in academia ita relinquet duas de quibus etiam atque etiam consideret haec para doca illi nos admirabilia dicamus inscite autem medicinae et gubernationis ultimum cum ultimo sapientiae comparatur atqui reperies inquit in hoc quidem pertinacem sed quid attinet de rebus tam apertis plura requirere mihi quidem antiochum quem audis satis belle videris attendere primum in nostrane potestate est quid meminerimus";
+      String[] notes = string.split(" ");
       // prepare the random generator
       Random random = new Random();
       List<Task> tasks = new ArrayList<>();
@@ -166,8 +168,11 @@ public class MainActivity extends AppCompatActivity implements TaskDeleteDialog.
          calendar.set(Calendar.MINUTE, randomMinute);
          // pick a random priority (0 = High, 1 = Medium, and 2 = Low)
          int randomPriority = random.nextInt(3);
+         // pick a random note word
+         int index = random.nextInt(notes.length);
+         String note = notes[index];
          // create a new Task with the random UUID, random name, random date, and random priority
-         Task task = new Task(uuid, name, calendar.getTime(), randomPriority, "Empty");
+         Task task = new Task(uuid, name, calendar.getTime(), randomPriority, note);
          tasks.add(task);
          TaskDatabase.instance(this).insert(task);
       }

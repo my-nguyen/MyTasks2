@@ -16,7 +16,6 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:text="@string/task_label"
-        android:textColor="@android:color/holo_blue_dark"
         android:textAppearance="?android:textAppearanceLarge"/>
     <EditText
         android:id="@+id/task_name"
@@ -24,25 +23,24 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/task_label"
         android:maxLines="1"
-        android:backgroundTint="#CCCCB3"
-        android:layout_marginLeft="@dimen/text_horizontal_margin"
-        android:layout_marginRight="@dimen/text_horizontal_margin"/>
+        android:backgroundTint="#CCCCCC"
+        android:layout_marginLeft="@dimen/detail_horizontal_margin"
+        android:layout_marginRight="@dimen/detail_horizontal_margin"/>
     <View
         android:id="@+id/task_separator"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:layout_below="@id/task_name"
-        android:layout_marginTop="@dimen/text_bottom_margin"
-        android:background="#CCCCB3"/>
+        android:layout_marginTop="@dimen/separator_top_margin"
+        android:background="#000000"/>
     <TextView
         android:id="@+id/due_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/task_separator"
         android:text="@string/due_label"
-        android:textColor="@android:color/holo_blue_dark"
         android:textAppearance="?android:textAppearanceLarge"
-        android:layout_marginTop="@dimen/text_top_margin"
+        android:layout_marginTop="@dimen/label_top_margin"
         android:layout_marginBottom="@dimen/text_bottom_margin"/>
     <TextView
         android:id="@+id/due_date"
@@ -50,8 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/due_label"
         android:layout_toLeftOf="@+id/date_picker"
-        android:layout_marginLeft="@dimen/text_horizontal_margin"
-        android:layout_marginRight="@dimen/text_horizontal_margin"/>
+        android:layout_marginLeft="@dimen/detail_horizontal_margin"
+        android:layout_marginRight="@dimen/detail_horizontal_margin"/>
     <ImageButton
         android:id="@+id/date_picker"
         android:layout_width="wrap_content"
@@ -59,6 +57,7 @@
         android:layout_below="@id/due_label"
         android:layout_alignParentRight="true"
         android:background="@android:color/transparent"
+        android:layout_marginRight="@dimen/detail_horizontal_margin"
         android:src="@drawable/date_picker_button"/>
     <View
         android:id="@+id/due_date_separator"
@@ -69,15 +68,15 @@
         android:layout_alignLeft="@id/due_date"
         android:layout_alignRight="@id/due_date"
         android:layout_marginBottom="@dimen/text_bottom_margin"
-        android:background="#CCCCB3"/>
+        android:background="#CCCCCC"/>
     <TextView
         android:id="@+id/due_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/due_date_separator"
         android:layout_toLeftOf="@+id/time_picker"
-        android:layout_marginLeft="@dimen/text_horizontal_margin"
-        android:layout_marginRight="@dimen/text_horizontal_margin"/>
+        android:layout_marginLeft="@dimen/detail_horizontal_margin"
+        android:layout_marginRight="@dimen/detail_horizontal_margin"/>
     <ImageButton
         android:id="@+id/time_picker"
         android:layout_width="wrap_content"
@@ -85,6 +84,7 @@
         android:layout_below="@id/due_date_separator"
         android:layout_alignParentRight="true"
         android:background="@android:color/transparent"
+        android:layout_marginRight="@dimen/detail_horizontal_margin"
         android:src="@drawable/time_picker_button"/>
     <View
         android:id="@+id/due_time_separator"
@@ -95,23 +95,22 @@
         android:layout_alignLeft="@id/due_time"
         android:layout_alignRight="@id/due_time"
         android:layout_marginBottom="@dimen/text_bottom_margin"
-        android:background="#CCCCB3"/>
+        android:background="#CCCCCC"/>
     <View
         android:id="@+id/due_separator"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:layout_below="@id/due_time_separator"
-        android:layout_marginTop="@dimen/text_bottom_margin"
-        android:background="#CCCCB3"/>
+        android:layout_marginTop="@dimen/separator_top_margin"
+        android:background="#000000"/>
     <TextView
         android:id="@+id/priority"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/due_separator"
         android:text="@string/priority_label"
-        android:textColor="@android:color/holo_blue_dark"
         android:textAppearance="?android:textAppearanceLarge"
-        android:layout_marginTop="@dimen/text_top_margin"
+        android:layout_marginTop="@dimen/label_top_margin"
         android:layout_marginBottom="@dimen/text_bottom_margin"/>
     <Spinner
         android:id="@+id/priority_spinner"
@@ -119,43 +118,43 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/priority"
         android:layout_below="@+id/priority"
-        android:layout_marginLeft="@dimen/text_horizontal_margin">
+        android:layout_marginRight="@dimen/detail_horizontal_margin">
     </Spinner>
     <View
         android:id="@+id/priority_separator"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:layout_below="@id/priority_spinner"
-        android:layout_marginTop="@dimen/text_bottom_margin"
-        android:background="#CCCCB3"/>
+        android:layout_marginTop="@dimen/separator_top_margin"
+        android:background="#000000"/>
     <TextView
         android:id="@+id/note_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/priority_separator"
         android:text="@string/note_label"
-        android:textColor="@android:color/holo_blue_dark"
         android:textAppearance="?android:textAppearanceLarge"
-        android:layout_marginTop="@dimen/text_top_margin"/>
+        android:layout_marginTop="@dimen/label_top_margin"/>
     <EditText
         android:id="@+id/note_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/note_label"
         android:maxLines="1"
-        android:backgroundTint="#CCCCB3"
-        android:layout_marginLeft="@dimen/text_horizontal_margin"/>
+        android:backgroundTint="#CCCCCC"
+        android:layout_marginLeft="@dimen/detail_horizontal_margin"
+        android:layout_marginRight="@dimen/detail_horizontal_margin"/>
     <View
         android:id="@+id/note_separator"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:layout_below="@id/note_text"
-        android:layout_marginTop="@dimen/text_bottom_margin"
-        android:background="#CCCCB3"/>
+        android:layout_marginTop="@dimen/separator_top_margin"
+        android:background="#000000"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/note_text"
+        android:layout_below="@+id/note_separator"
         android:orientation="horizontal">
         <Button
             android:id="@+id/save"
@@ -163,13 +162,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginTop="@dimen/text_top_margin"/>
+            android:layout_marginTop="@dimen/button_top_margin"/>
         <Button
             android:id="@+id/cancel"
             android:text="@string/cancel_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginTop="@dimen/text_top_margin"/>
+            android:layout_marginTop="@dimen/button_top_margin"/>
     </LinearLayout>
 </RelativeLayout>

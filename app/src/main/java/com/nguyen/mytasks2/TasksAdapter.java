@@ -67,14 +67,13 @@ public class TasksAdapter extends ArrayAdapter<Task> {
       int textColor;
       if (diff > 0) {
          // task that expired
-         textColor = Color.RED;
+         textColor = Color.parseColor("#CC0000");
       } else if (diff >= -86400000) {
          // task scheduled within one day
          textColor = Color.parseColor("#FFD700");
       } else {
          // task beyond one day
-         // textColor = Color.GREEN;
-         textColor = Color.parseColor("#006400");
+         textColor = Color.parseColor("#009900");
       }
       viewHolder.date.setTextColor(textColor);
       // format the Date and Time of Task
