@@ -174,6 +174,7 @@ public class MainActivity extends AppCompatActivity implements TaskDeleteDialog.
          // create a new Task with the random UUID, random name, random date, and random priority
          Task task = new Task(uuid, name, calendar.getTime(), randomPriority, note);
          tasks.add(task);
+         // save to local database
          TaskDatabase.instance(this).insert(task);
       }
       return tasks;

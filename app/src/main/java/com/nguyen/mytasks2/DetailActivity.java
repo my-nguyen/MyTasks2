@@ -163,6 +163,7 @@ public class DetailActivity extends AppCompatActivity
 
    @Override
    public boolean onCreateOptionsMenu(Menu menu) {
+      /*
       // get the MenuItem with ShareActionProvider
       getMenuInflater().inflate(R.menu.menu_detail, menu);
       MenuItem item = menu.findItem(R.id.share_action);
@@ -175,6 +176,7 @@ public class DetailActivity extends AppCompatActivity
       intent.setType("text/plain");
       intent.putExtra(Intent.EXTRA_TEXT, mTask.toString());
       provider.setShareIntent(intent);
+      */
 
       return super.onCreateOptionsMenu(menu);
    }

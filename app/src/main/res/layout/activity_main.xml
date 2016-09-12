@@ -21,14 +21,17 @@
             <TextView
                 android:id="@+id/sort_label"
                 android:text="@string/sort_label"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/item_horizontal_margin"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textStyle="bold"
                 android:textAppearance="?android:textAppearanceMedium"/>
             <Spinner
                 android:id="@+id/sort_spinner"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:layout_marginLeft="@dimen/item_horizontal_margin"/>
         </LinearLayout>
         <View
